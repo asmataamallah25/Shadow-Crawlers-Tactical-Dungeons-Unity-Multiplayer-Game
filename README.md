@@ -1,61 +1,108 @@
-# Spike & Run
+# ⚔️ Shadow Crawlers: Tactical Dungeons ⚔️
 
-![Spike & Run menu](docs/screenshots/menu.jpeg)
 
-**Spike & Run** is a multiplayer 2D platformer made in Unity. Players create or join rooms, run through procedurally generated terrain, collect coins, avoid spikes and enemies, unlock skins, chat in-game, and customize their character.
 
-Play it on itch.io: https://mosvic-games.itch.io/spike-and-run
+Shadow Crawlers is an advanced online multiplayer 2D dungeon crawler game developed inside Unity. Players can seamlessly connect, create or join tactical lobbies, and complete high-stakes dungeon runs under a shared, fully synchronized network game state.
 
-## Screenshots
 
-![Gameplay](docs/screenshots/gameplay.jpeg)
 
-![Chat](docs/screenshots/chat.jpeg)
+### 🚀 Key Features
 
-## Features
 
-- Online multiplayer rooms with Photon PUN2
-- Procedural 2D platformer level generation
-- Coins, shop, inventory, promocodes, and workshop skin creation
-- Runtime sprite-based animation without Animator state machines
-- Custom recolored skins synced across the network
-- In-game chat and room codes
-- English/Russian localization
-- Menu music, SFX, jump and walking sounds with distance falloff
 
-## Tech Stack
+**🌐 Robust Multiplayer Lobbies:** Fully integrated with Photon PUN2, supporting dynamic custom room codes, live server connection tracking, and state-of-the-art network interpolation for ultra-smooth player positioning.
 
-- Unity 6.3 LTS
-- C#
-- Photon PUN2
-- TextMeshPro
-- Unity Localization
-- macOS development on Mac mini M4
 
-## Setup
 
-This public repository is sanitized before upload. To run multiplayer/account features locally, configure these placeholders:
+**🗺️ Procedural Map Logic:** Features an automatic 2D level generator that dynamically paints customized tilemaps, obstacles, and objective layouts for every new game session.
 
-- `Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset`
-  - `AppIdRealtime: YOUR_PHOTON_APP_ID_HERE`
-- `Assets/AccountLoginUI.cs`
-  - `accountServerUrl: YOUR_ACCOUNT_SERVER_URL_HERE`
-- `Assets/2D Platformer/Scenes/Menu.unity`
-  - `accountServerUrl: YOUR_ACCOUNT_SERVER_URL_HERE`
 
-Open the project in Unity 6.3, restore your Photon App ID, and press Play from `Assets/2D Platformer/Scenes/Menu.unity`.
 
-## Scenes
+**🕹️ Core Mechanics \& State Sync:** Features a network-ready 2D player controller with fluid grid movement, instant networked coin pickup states, and integrated enemy tracking.
 
-- `Menu` - main menu, store, inventory, workshop, settings, account panel
-- `GameScene` - multiplayer gameplay, level generation, chat, pause menu
 
-## Builds
 
-The project includes helper tooling for itch.io release builds:
+**🧠 Autonomous Enemy AI:** Dungeons are populated by interactive AI patrols that automatically calculate pathfinding constraints to challenge players.
 
-- Unity menu: `Build -> Itch -> Build Windows Release`
-- Unity menu: `Build -> Itch -> Build macOS Release`
-- Packaging script: `Tools/package_itch.sh`
 
-Final public builds are uploaded separately to itch.io, not committed to Git.
+
+**🖥️ Optimized UI \& Subsystems:** Equipped with responsive connection screens, interactive graphics settings, tab menus, and real-time networked chat systems.
+
+
+
+**🧼 Sanitized Codebase:** Thoroughly refactored and fully optimized for academic and production review—free of redundant scripts or localized legacy systems.
+
+
+
+### 🛠️ Tech Stack
+
+
+
+**🎮 Game Engine:** Unity 6 LTS
+
+
+
+**💻 Programming Language:** C# (.NET Core)
+
+
+
+**📡 Networking Pipeline:** Photon Unity Networking (PUN2)
+
+
+
+**🎨 UI Interface:** TextMeshPro \& Unity UI Engine
+
+
+
+### 📂 Architecture \& Scenes
+
+
+
+The codebase follows strict structural separation to ensure maximum stability:
+
+
+
+**🏰 Menu:** Powers network matchmaking, global server connection management, private room creation, and system configuration dropdowns.
+
+
+
+**🎮 GameScene:** Hosts active multiplayer matches, live procedural tilemap generation, entity interpolation, and centralized UI status displays.
+
+
+
+### ⚙️ Quick Setup \& Execution
+
+
+
+Download or clone this project repository into your local machine.
+
+
+
+Launch the folder using Unity 6.
+
+
+
+Set your custom Photon credentials via the Unity Inspector at:
+
+**Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset**
+
+
+
+Enter your unique **AppIdRealtime** into the appropriate field.
+
+
+
+Open, load, and run the project directly from: **Assets/Scenes/Menu.unity**.
+
+
+
+### 👤 Main Developer
+
+
+
+Designed, refactored, and deployed by:
+
+
+
+**⭐ Asma Taamallah ⭐**
+
